@@ -9,9 +9,7 @@ async function login(url, account, username, password)
         jar
     });
 
-    let lt = dom.window.document.getElementsByName('lt');
     let execution = dom.window.document.getElementsByName('execution');
-    lt = lt[0].value;
     execution = execution[0].value;
 
     dom = await getDOM({
@@ -21,7 +19,6 @@ async function login(url, account, username, password)
         data: {
             username,
             password,
-            lt,
             execution,
             _eventId: 'submit',
             submit: ''
